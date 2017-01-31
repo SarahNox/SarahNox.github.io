@@ -1,5 +1,5 @@
 var gridElement = document.getElementById('grid');
-var dashgrid = document.getElementById('dashgrid');
+var dashboard = document.getElementById('dashboard');
 
 var grid = {
   grid: [],
@@ -76,7 +76,7 @@ var grid = {
     }
   },
   renderGameOver: function(winner) {
-    dashgrid.innerHTML = "";
+    dashboard.innerHTML = "";
     gridElement.innerHTML = "";
     gridElement.style.border = "none";
     var output = "Game Over! ";
@@ -97,7 +97,7 @@ var grid = {
     gridElement.appendChild(reload);
     reload.innerHTML = "Play Again";
     reload.setAttribute('href', 'tic-tac-toe.html');
-    dashgrid.style.visibility = 'hidden';
+    dashboard.style.visibility = 'hidden';
   }
 }
 
@@ -113,7 +113,7 @@ var game = {
   },
   renderUpdate: function() {
     let output = 'Current Player: ' + this.currentPlayer.toUpperCase();
-    dashgrid.innerHTML = output;
+    dashboard.innerHTML = output;
   },
   choosePlayers: function() {
     let playerSymbols = ['x', 'o'];

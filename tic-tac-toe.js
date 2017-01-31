@@ -46,16 +46,17 @@ var grid = {
     var col1 = [this.grid[0], this.grid[3], this.grid[6]];
     var col2 = [this.grid[1], this.grid[4], this.grid[7]];
     var col3 = [this.grid[2], this.grid[5], this.grid[8]];
-    var a1C3 = [this.grid[0], this.grid[4], this.grid[8]];
-    var c1A3 = [this.grid[6], this.grid[4], this.grid[2]];
+    var diag1 = [this.grid[0], this.grid[4], this.grid[8]];
+    var diag2 = [this.grid[6], this.grid[4], this.grid[2]];
+
     if (this.hasSameSymbol(row1, game.currentPlayer)) { return true; }
     if (this.hasSameSymbol(row2, game.currentPlayer)) { return true; }
     if (this.hasSameSymbol(row3, game.currentPlayer)) { return true; }
     if (this.hasSameSymbol(col1, game.currentPlayer)) { return true; }
     if (this.hasSameSymbol(col2, game.currentPlayer)) { return true; }
     if (this.hasSameSymbol(col3, game.currentPlayer)) { return true; }
-    if (this.hasSameSymbol(a1C3, game.currentPlayer)) { return true; }
-    if (this.hasSameSymbol(c1A3, game.currentPlayer)) { return true; }
+    if (this.hasSameSymbol(diag1, game.currentPlayer)) { return true; }
+    if (this.hasSameSymbol(diag2, game.currentPlayer)) { return true; }
     return false;
   },
   hasSameSymbol: function(tripletArray, player) {

@@ -40,14 +40,14 @@ var grid = {
     return full;
   },
   victory: function() {
-    let row1 = [this.grid[0], this.grid[1], this.grid[2]];
-    let row2 = [this.grid[3], this.grid[4], this.grid[5]];
-    let row3 = [this.grid[6], this.grid[7], this.grid[8]];
-    let col1 = [this.grid[0], this.grid[3], this.grid[6]];
-    let col2 = [this.grid[1], this.grid[4], this.grid[7]];
-    let col3 = [this.grid[2], this.grid[5], this.grid[8]];
-    let a1C3 = [this.grid[0], this.grid[4], this.grid[8]];
-    let c1A3 = [this.grid[6], this.grid[4], this.grid[2]];
+    var row1 = [this.grid[0], this.grid[1], this.grid[2]];
+    var row2 = [this.grid[3], this.grid[4], this.grid[5]];
+    var row3 = [this.grid[6], this.grid[7], this.grid[8]];
+    var col1 = [this.grid[0], this.grid[3], this.grid[6]];
+    var col2 = [this.grid[1], this.grid[4], this.grid[7]];
+    var col3 = [this.grid[2], this.grid[5], this.grid[8]];
+    var a1C3 = [this.grid[0], this.grid[4], this.grid[8]];
+    var c1A3 = [this.grid[6], this.grid[4], this.grid[2]];
     if (this.hasSameSymbol(row1, game.currentPlayer)) { return true; }
     if (this.hasSameSymbol(row2, game.currentPlayer)) { return true; }
     if (this.hasSameSymbol(row3, game.currentPlayer)) { return true; }
@@ -104,19 +104,19 @@ var game = {
     this.listen();
   },
   renderUpdate: function() {
-    let output = 'Current Player: ' + this.currentPlayer.toUpperCase();
+    var output = 'Player: ' + this.currentPlayer.toUpperCase();
     dashboard.innerHTML = output;
   },
   choosePlayers: function() {
-    let playerSymbols = ['x', 'o'];
-    let randomNumber = Math.round(Math.random());
+    var playerSymbols = ['x', 'o'];
+    var randomNumber = Math.round(Math.random());
     this.player1 = playerSymbols.splice(randomNumber,1).toString();
     this.player2 = playerSymbols[0];
     this.currentPlayer = this.player1;
   },
   switchPlayers: function() {
-    let player1 = this.player1;
-    let player2 = this.player2;
+    var player1 = this.player1;
+    var player2 = this.player2;
     this.currentPlayer = this.currentPlayer === this.player1 ? player2 : player1;
   },
   processTurn: function(gridIndex) {
@@ -130,8 +130,8 @@ var game = {
   listen: function() {
     gridElement.addEventListener('click', function(event) {
       if(event.target.classList.contains('blank')) {
-        let id = event.target.id;
-        let index = (id.charAt(id.length - 1) - 1);
+        var id = event.target.id;
+        var index = (id.charAt(id.length - 1) - 1);
         game.processTurn(index);
       }
     });

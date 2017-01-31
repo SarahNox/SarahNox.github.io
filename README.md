@@ -18,7 +18,7 @@ Find a demo under : .....
 
 ## Implementation
 
-I did implement the solution with Javascript but it could also have been solved with several different approaches.
+I did implement the solution with Javascript but it could also have been solved with differently.
 
 ---
 

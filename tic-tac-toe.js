@@ -78,7 +78,7 @@ var grid = {
           "Player 2 (" + game.player2.toUpperCase() + ")";
       output += " wins!"
     } else {
-      output += "It's a tie!";
+      output += "It's a cat's game!";
     }
     var outputElement = document.createElement('p');
     var reload = document.createElement('a');

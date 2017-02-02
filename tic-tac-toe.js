@@ -40,23 +40,24 @@ var grid = {
     return full;
   },
   victory: function() {
-    var row1 = [this.grid[0], this.grid[1], this.grid[2]];
-    var row2 = [this.grid[3], this.grid[4], this.grid[5]];
-    var row3 = [this.grid[6], this.grid[7], this.grid[8]];
-    var col1 = [this.grid[0], this.grid[3], this.grid[6]];
-    var col2 = [this.grid[1], this.grid[4], this.grid[7]];
-    var col3 = [this.grid[2], this.grid[5], this.grid[8]];
-    var diag1 = [this.grid[0], this.grid[4], this.grid[8]];
-    var diag2 = [this.grid[6], this.grid[4], this.grid[2]];
+    var g = this.grid
+    var win1 = [g[0], g[1], g[2]];
+    var win2 = [g[3], g[4], g[5]];
+    var win3 = [g[6], g[7], g[8]];
+    var win4 = [g[0], g[3], g[6]];
+    var win5 = [g[1], g[4], g[7]];
+    var win6 = [g[2], g[5], g[8]];
+    var win7 = [g[0], g[4], g[8]];
+    var win8 = [g[6], g[4], g[2]];
 
-    if (this.hasSameSymbol(row1, game.currentPlayer)) { return true; }
-    if (this.hasSameSymbol(row2, game.currentPlayer)) { return true; }
-    if (this.hasSameSymbol(row3, game.currentPlayer)) { return true; }
-    if (this.hasSameSymbol(col1, game.currentPlayer)) { return true; }
-    if (this.hasSameSymbol(col2, game.currentPlayer)) { return true; }
-    if (this.hasSameSymbol(col3, game.currentPlayer)) { return true; }
-    if (this.hasSameSymbol(diag1, game.currentPlayer)) { return true; }
-    if (this.hasSameSymbol(diag2, game.currentPlayer)) { return true; }
+    if (this.hasSameSymbol(win1, game.currentPlayer)) { return true; }
+    if (this.hasSameSymbol(win2, game.currentPlayer)) { return true; }
+    if (this.hasSameSymbol(win3, game.currentPlayer)) { return true; }
+    if (this.hasSameSymbol(win4, game.currentPlayer)) { return true; }
+    if (this.hasSameSymbol(win5, game.currentPlayer)) { return true; }
+    if (this.hasSameSymbol(win6, game.currentPlayer)) { return true; }
+    if (this.hasSameSymbol(win7, game.currentPlayer)) { return true; }
+    if (this.hasSameSymbol(win8, game.currentPlayer)) { return true; }
     return false;
   },
   hasSameSymbol: function(tripletArray, player) {

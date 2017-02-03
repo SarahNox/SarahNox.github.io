@@ -22,10 +22,10 @@ var grid = {
     }
   },
   checkForGameOver: function() {
-    if(this.full()) {
-      this.renderGameOver(false);
-    } else if(this.victory()) {
+    if(this.victory()) {
       this.renderGameOver(game.currentPlayer);
+    } else if(this.full()) {
+        this.renderGameOver(false);
     } else {
       return false;
     }

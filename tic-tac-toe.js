@@ -90,7 +90,7 @@ var grid = {
     outputElement.innerHTML = output;
     gridElement.appendChild(reload);
     reload.innerHTML = "Play Again";
-    reload.setAttribute('href', 'tic-tac-toe.html');
+    reload.setAttribute('href', 'index.html');
     dashboard.style.visibility = 'hidden';
   }
 }

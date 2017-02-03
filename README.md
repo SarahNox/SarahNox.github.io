@@ -12,7 +12,7 @@ This game is just to fill in time when waiting f.e. for a colleague to finish a 
 
 ## Demo
 
-Find a demo under : [Tic Tac Toe] (https://sarahnox.github.io/tic-tac-toe/.)
+Find a demo under : [Tic Tac Toe] (https://sarahnox.github.io/.)
 
 ---
 

@@ -18,7 +18,7 @@ Find a demo under : [Tic Tac Toe] (https://sarahnox.github.io/tic-tac-toe/.)
 
 ## Implementation
 
-I did implement the solution with Javascript but it could also have been solved with differently.
+I did implement the solution with Javascript but it could also have been solved differently.
 
 ---
 
